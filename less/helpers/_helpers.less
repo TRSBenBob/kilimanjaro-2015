@@ -1,7 +1,7 @@
 // Helper functions
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix() {
+.clearfix {
 	*zoom:1;
 	
 	&:before,
@@ -13,3 +13,59 @@
 	    clear:both;
 	}
 }
+
+// Floats
+.left { float: left; }
+.right { float: right; }
+
+// Display
+.block { display: block; }
+.inline { display: inline; }
+.inline-block {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.none, [hidden], .no-desktop {
+	display: none;
+}
+
+// Font Weights
+.heavy { font-weight: 900; }
+.strong { font-weight: 700; }
+.normal { font-weight: normal; }
+.thin { font-weight: 300; }
+.italic { font-style: italic; }
+
+// Font Styles
+.capitalize { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+
+// Text Position
+.left-text { text-align: left; }
+.right-text { text-align: right; }
+.center-text { text-align: center; }
+
+// Accessibility (offscreen text for screen readers)
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -9999em;
+}
+.visuallyvisible {
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  left: 0;
+}
+
+// Margin and Padding Reset
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
