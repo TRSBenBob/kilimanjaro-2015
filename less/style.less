@@ -1,10 +1,10 @@
 // Kilimanjaro 2015 Stylesheet
 
 // Less utilities
-@import "helpers/_variables";
-@import "helpers/_functions";
-@import "helpers/_mixins";
-@import "helpers/_helpers";
+@import (reference) "helpers/_variables";
+@import (reference) "helpers/_functions";
+@import (reference) "helpers/_mixins";
+@import (reference) "helpers/_helpers";
  
 // Vendors & external stylesheets
 @import "vendor/semantic-gs";
@@ -23,7 +23,9 @@
 @import "components/_sticky-footer";
  
 // Page-specific stylesheets
+@import (reference) "pages/_page";
 @import "pages/_home";
+@import "pages/_contact";
  
 // Themes
 
