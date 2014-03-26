@@ -876,10 +876,7 @@ body:before {
   width: 0;
   margin-top: -32767px;
 }
-.page article,
-.home article,
-.contact article,
-.gallery article {
+.page article {
   display: inline;
   float: left;
   width: 72.91666666666666%;
@@ -887,13 +884,10 @@ body:before {
   margin-right: 1.0416666666666665%;
   margin-bottom: 0.5em;
   padding: 0.5em 0;
-  background: rgba(17, 17, 17, 0.19999999999999996);
+  background: rgba(0, 0, 0, 0.25);
 }
 @media only screen and (max-width: 739px) {
-  .page article,
-  .home article,
-  .contact article,
-  .gallery article {
+  .page article {
     display: inline;
     float: left;
     width: 97.91666666666666%;
@@ -901,10 +895,7 @@ body:before {
     margin-right: 1.0416666666666665%;
   }
 }
-.page aside,
-.home aside,
-.contact aside,
-.gallery aside {
+.page aside {
   display: inline;
   float: left;
   width: 22.916666666666664%;
@@ -912,19 +903,13 @@ body:before {
   margin-right: 1.0416666666666665%;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  background: rgba(17, 17, 17, 0.19999999999999996);
+  background: rgba(0, 0, 0, 0.25);
 }
-.page aside a,
-.home aside a,
-.contact aside a,
-.gallery aside a {
+.page aside a {
   color: #f4f7f7;
 }
 @media only screen and (max-width: 739px) {
-  .page aside,
-  .home aside,
-  .contact aside,
-  .gallery aside {
+  .page aside {
     display: inline;
     float: left;
     width: 97.91666666666666%;
@@ -1001,6 +986,11 @@ body:before {
   }
   .home .carousel .slide .content .read-more {
     position: static;
+    display: block;
+    margin-top: 0.5em;
+  }
+  .home .carousel .slide .content .read-more:before {
+    content: "Click here to ";
   }
 }
 .home .info {

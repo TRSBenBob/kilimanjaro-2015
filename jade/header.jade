@@ -1,0 +1,17 @@
+- var headerNav = ["Home", "About", "Blog", "Events", "Gallery", "Contact", "Donate"]
+
+header
+	.inner
+		.brand
+			a(href="/") Kilimanjaro 2015
+		
+		nav
+			ul
+				each link in headerNav
+					li
+						a(href="/" + (link == "Home" ? "" : (link.toLowerCase() + "/")), class=(link == nav ? "current" : ""))
+							if link == "Donate"
+								= link
+								span.icon-smile
+							else
+								= link

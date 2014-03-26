@@ -1,0 +1,14 @@
+extends ../jade/page
+
+block vars
+	- nav = "Gallery"
+	- title = "Gallery"
+
+block content
+	section.galleries
+		- for (var i = 0; i < 6; ++i) {
+			a.gallery(href="#")
+				img(src="http://placehold.it/180x180/E3E6E6/849235")
+		- }
+
+block sidebar

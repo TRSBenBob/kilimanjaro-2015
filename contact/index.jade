@@ -1,0 +1,59 @@
+extends ../jade/page
+
+block vars
+	- nav = "Contact"
+	- title = "Contact Us"
+
+block content
+	form(action="/contact/")
+		p
+			label(for="contact-name") Your Name
+			input#contact-name(type="text", name="contact-name")
+		p
+			label(for="contact-email") Your E-mail
+			input#contact-email(type="text", name="contact-email")
+		p
+			label(for="contact-phone") Phone Number
+			input#contact-phone(type="text", name="contact-phone")
+		p
+			label(for="contact-message") Your Message
+			textarea#contact-message(name="contact-message", rows="3")
+		p
+			input#contact-submit(type="submit", name="contact-submit", value="Submit")
+
+block sidebar
+	.contact-card
+		img(src="http://placehold.it/192x192/E3E6E6/849235")
+		br
+		| Cliff Woodward
+		br
+		a(href="#")
+			span.icon-facebook
+			| on Facebook
+		a(href="#")
+			span.icon-googleplus
+			| on Google+
+		a(href="#")
+			span.icon-twitter
+			| on Twitter
+		a(href="mailto:lorem@ipsum.com")
+			span.icon-twitter
+			| by e-mail
+	
+	.contact-card
+		img(src="http://placehold.it/192x192/E3E6E6/849235")
+		br
+		| Scott Mills
+		br
+		a(href="#")
+			span.icon-facebook
+			| on Facebook
+		a(href="#")
+			span.icon-googleplus
+			| on Google+
+		a(href="#")
+			span.icon-twitter
+			| on Twitter
+		a(href="mailto:lorem@ipsum.com")
+			span.icon-twitter
+			| by e-mail

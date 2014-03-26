@@ -1,0 +1,18 @@
+include head.jade
+body
+	block vars
+
+	.parallax-bg
+		img(src="/img/Merged.svg" alt="Mount Kilimanjaro")
+	.wrap
+		include header.jade
+
+		main(class=["page", (nav.toLowerCase())])
+			.inner
+				article
+					h1= title
+					block content
+				aside
+					block sidebar
+
+	include footer.jade
