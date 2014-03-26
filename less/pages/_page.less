@@ -1,5 +1,39 @@
 // Page style, for extending by specific page layouts
 
 .page {
-	
+	article {
+		.column(9);
+		// .push(3);
+		.round-corners;
+
+		margin-bottom: 0.5em;
+
+		padding: 0.5em 0;
+
+		background: fadeout(#111, 80%);
+
+		@media @breakpoint-mobile {
+			.column(12);
+		}
+	}
+
+	aside {
+		// .pull(9);
+		.column(3);
+		.round-corners;
+
+		margin-bottom: 0.5em;
+
+		padding: 0.5em;
+
+		background: fadeout(#111, 80%);
+
+		a {
+			color: @snow;
+		}
+
+		@media @breakpoint-mobile {
+			.column(12);
+		}
+	}
 }

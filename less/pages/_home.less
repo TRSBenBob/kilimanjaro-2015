@@ -3,31 +3,55 @@
 .home {
 	&:extend(.page all);
 
-	article {
-		.column(9);
-
+	@import "components/_carousel";
+	
+	.info {
 		margin-bottom: 0.5em;
+		padding: 1em;
 
-		padding: 0.5em;
+		background: fadeout(#111, 80%);
 
-		background: rgba(255,255,255,0.25);
+		.clearfix;
 
-		@media @breakpoint-mobile {
-			.column(12);
+		p {
 		}
 	}
 
-	aside {
-		.column(3);
-
+	.links {
 		margin-bottom: 0.5em;
 
-		padding: 0.5em;
+		nav {
+			.clearfix;
 
-		background: rgba(255,255,255,0.125);
+			background: fadeout(#111, 80%);
 
-		@media @breakpoint-mobile {
-			.column(12);
+			a {
+				color: @snow;
+			}
+		}
+
+		a {
+			.column(4);
+
+			padding: 1em 5%;
+
+			color: @grass-light;
+			font-weight: 600;
+			text-align: center;
+			letter-spacing: 0.025em;
+
+			img {
+				display: block;
+				
+				width: 100%;
+				max-width: 200px;
+
+				margin: 0 auto;				
+			}
+
+			@media @breakpoint-small-mobile {
+				.column(12);
+			}
 		}
 	}
 }

@@ -1,0 +1,64 @@
+// Home page carousel
+
+.carousel {
+	margin-bottom: 0.5em;
+
+	.slide {
+		display: block;
+
+		background: fadeout(#111, 80%);
+
+		.clearfix;
+		
+		.image {
+			.column(6);
+			height: 250px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.content {
+			.column(6);
+
+			position: relative;
+			height: 250px;
+
+			padding: 0.5em;
+
+			color: @snow;
+			
+			p {
+				margin-bottom: 0.5em;
+			}
+
+			.read-more {
+				position: absolute;
+				left: 0.5em;
+				bottom: 0.5em;
+
+				font-weight: 600;
+			}
+		}
+
+		&:hover .read-more {
+			text-decoration: underline;
+		}
+
+		@media @breakpoint-mobile {
+			.image {
+				.column(12);
+				background-size: contain;
+			}
+
+			.content {
+				.column(12);
+				height: auto;
+
+				text-align: center;
+
+				.read-more {
+					position: static;
+				}
+			}
+		}
+	}
+}

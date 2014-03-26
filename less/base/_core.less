@@ -4,8 +4,10 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: linear-gradient(to bottom, @sky-light 0%, @sky-dark 100%) repeat left top transparent;
+.wrap {
+	// background: @sky-light;
+
+	background-size: 100%;
 }
 
 .inner {
@@ -18,33 +20,21 @@ body {
 	.clearfix;
 }
 
+.parallax-bg {
+	position: fixed;
+	z-index: -1;
 
-// main {
-// 	article {
-// 		.column(9);
+	width: 100%;
+	height: 100%;
 
-// 		margin-bottom: 0.5em;
+	background: @sky-light;
 
-// 		padding: 0.5em;
+	img {
+		position: absolute;
+		bottom: 0;
 
-// 		background: rgba(255,255,255,0.25);
+		width: 100%;
 
-// 		@media @breakpoint-mobile {
-// 			.column(12);
-// 		}
-// 	}
-
-// 	aside {
-// 		.column(3);
-
-// 		margin-bottom: 0.5em;
-
-// 		padding: 0.5em;
-
-// 		background: rgba(255,255,255,0.125);
-
-// 		@media @breakpoint-mobile {
-// 			.column(12);
-// 		}
-// 	}
-// }
+		marign: 0 auto;
+	}
+}

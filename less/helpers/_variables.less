@@ -16,21 +16,25 @@
 @grass-light:   #849235;
 @grass-lighter: #BADA55;
 @snow:          #F4F7F7;
+@donate:        #DE3638;
 
 // Grid Variables 
-@mobile-container:  100%;
-@tablet-container:  720px;
-@desktop-container: 960px;
+@small-mobile-container: 480px;
+@mobile-container:       100%;
+@tablet-container:       720px;
+@desktop-container:      960px;
 
 // Resonsive Design Break Points
-@mobile-width:  (@tablet-container + 19px);
-@tablet-width:  (@tablet-container + 20px);
-@desktop-width: (@desktop-container);
+@small-mobile-width: (@small-mobile-container);
+@mobile-width:       (@tablet-container + 19px);
+@tablet-width:       (@tablet-container + 20px);
+@desktop-width:      (@desktop-container);
 
 // Breakpoint definitions
 @breakpoint-desktop: ~"only screen and (min-width: @{desktop-width})";
 @breakpoint-tablet:  ~"only screen and (min-width: @{tablet-width}) and (max-width: @{desktop-width})";
 @breakpoint-mobile:  ~"only screen and (max-width: @{mobile-width})";
+@breakpoint-small-mobile:  ~"only screen and (max-width: @{small-mobile-width})";
 
 // Headings
 @h1: 40;
