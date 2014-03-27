@@ -4,20 +4,29 @@
 	margin-bottom: 0.5em;
 
 	.slide {
+		position: relative;
 		display: block;
 
 		background: fadeout(#111, 80%);
 
 		.clearfix;
-		
+
 		.image {
 			.column(6);
-			height: 250px;
-			background-repeat: no-repeat;
-			background-position: center;
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+
+			margin-top: auto;
+			margin-bottom: auto;
+			
+			max-height: 250px;
+			max-width: 460px;
 		}
 		.content {
 			.column(6);
+			float: right;
 
 			position: relative;
 			height: 250px;
@@ -45,8 +54,16 @@
 
 		@media @breakpoint-mobile {
 			.image {
-				.column(12);
-				background-size: contain;
+				position: static;
+				display: block;
+
+				float: none;
+
+				width: 100%;
+				max-width: 460px;
+				height: auto;
+				
+				margin: 1em auto 0;
 			}
 
 			.content {
@@ -60,9 +77,12 @@
 					display: block;
 
 					margin-top: 0.5em;
+					
+					text-transform: lowercase;
 
 					&:before {
 						content: "Click here to ";
+						text-transform: none;
 					}
 				}
 			}

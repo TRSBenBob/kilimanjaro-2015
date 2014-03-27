@@ -1,9 +1,12 @@
 include head.jade
+include mixins.jade
+
 body
 	block vars
 
 	.parallax-bg
-		img(src="/img/Merged.svg" alt="Mount Kilimanjaro")
+		+svgBackground()
+
 	.wrap
 		include header.jade
 
